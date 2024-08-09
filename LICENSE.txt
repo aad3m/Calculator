@@ -1,19 +1,23 @@
-Copyright (c) HTML5 Boilerplate
+Simple GNU General Public License (GPL) v3
 
-Permission is hereby granted, free of charge, to any person obtaining a copy of
-this software and associated documentation files (the "Software"), to deal in
-the Software without restriction, including without limitation the rights to
-use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies
-of the Software, and to permit persons to whom the Software is furnished to do
-so, subject to the following conditions:
+This software is licensed under the GNU General Public License v3.0.
 
-The above copyright notice and this permission notice shall be included in all
-copies or substantial portions of the Software.
+You are free to:
 
-THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
-AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
-OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
-SOFTWARE.
+- **Run**: The software for any purpose.
+- **Study**: How the program works, and change it to make it do what you wish.
+- **Share**: The software with others.
+- **Modify**: The software and distribute your modifications.
+
+However, you must follow these conditions:
+
+- **Source Code**: You must provide access to the source code when you distribute the software or any modifications you make.
+- **License**: You must retain this license and all its terms when distributing the software or modifications.
+- **No Additional Restrictions**: You cannot impose additional legal or technological restrictions on the rights granted by this license.
+
+Disclaimer:
+
+This software is provided "as-is" without any warranty. The authors are not liable for any damages arising from its use.
+
+For the full version of the GNU General Public License, please refer to <https://www.gnu.org/licenses/gpl-3.0.html>.
+
