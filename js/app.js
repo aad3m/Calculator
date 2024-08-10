@@ -1,26 +1,39 @@
 
 const display = document.getElementById("display");
+const clearButton = document.getElementById("clearButton");
 
+let lastActionWasCalculation = false;
 
-// Shows Value
+// Displays Value
 function appendToDisplay(value) {
+  if (lastActionWasCalculation === true) {
+    clearDisplay();
+  }
+
   if (value === '.') {
-    const currentInput = display.value.split(/[\+\-\*\÷]/).pop();
+    const parts = display.value.split(/[\+\-\*\÷]/);
+    const currentInput = parts[parts.length - 1];
     if (currentInput.includes('.')) {
       return;
     }
   }
+  // Clear if Error
   if (display.value === "Error") {
     clearDisplay()
   }
   display.value += value;
+  lastActionWasCalculation = false;
   updateClearButton();
 }
 
+// Clear Display
 function clearDisplay() {
   display.value = "";
+  lastActionWasCalculation = false;
+  updateClearButton();
 }
 
+// Toggle Between Positive/Negative
 function toggleSign() {
   if (display.value) {
     if (display.value.startsWith('-')){
@@ -31,6 +44,7 @@ function toggleSign() {
   }
 }
 
+// Calculate Value
 function calculate(){
   let expression = display.value;
 
@@ -47,28 +61,37 @@ function calculate(){
     display.value = result
     if (!isFinite(result)) {
       throw new Error (Infinity)
-
     }
+    display.value = result
+    lastActionWasCalculation = true;
   } catch (error) {
     display.value = "Error"
+    lastActionWasCalculation = false;
   }
   updateClearButton();
 }
 
+// Clear or Single Delete Value
 function clearOrDelete() {
-  if (display.value.length > 1) {
+  if (lastActionWasCalculation) {
+    clearDisplay();
+  }else {
+    if (display.value.length > 1) {
+      display.value = display.value.slice(0, -1);
 
-    display.value = display.value.slice(0, -1);
-  } else {
-    display.value = "";
+    } else {
+      clearDisplay();
+    }
   }
   updateClearButton();
 }
 
+// Update Button
 function updateClearButton() {
-  if (display.value.length > 0) {
+  if (display.value.length > 0 && lastActionWasCalculation === false) {
     clearButton.innerText = '⌫';
   } else {
-    clearButton.innerText = 'C';
+    clearButton.innerText = 'AC';
   }
 }
+
