@@ -1,15 +1,17 @@
-body{
+body {
   margin: 0;
-  padding: 20px;
   height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
   background: rgba(0, 0, 0, 0.89);
   flex-direction: column;
+  line-height: 1;
+  box-sizing: border-box;
+  padding: 20px
 }
 
-#calculator{
+#calculator {
   background-color: hsl(0, 0%, 0%);
   border-radius: 25px;
   max-width: 500px;
@@ -18,7 +20,7 @@ body{
   overflow: hidden;
 }
 
-#display{
+#display {
   width: 100%;
   padding: 20px;
   font-size: 5rem;
@@ -31,7 +33,7 @@ body{
   box-sizing: border-box;
 }
 
-#keys{
+#keys {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   gap: 10px;
@@ -56,46 +58,41 @@ button:hover {
 button:active {
   background-color: hsl(0, 0%, 35%);
 }
-.operator-btn{
+.operator-btn {
   background-color: hsl(32, 100%, 55%);
 }
-.operator-btn:hover{
+.operator-btn:hover {
   background-color: hsl(35, 100%, 65%);
 }
-.operator-btn:active{
+.operator-btn:active {
   background-color: hsl(35, 100%, 75%);
 }
 
-.top-btn{
+.top-btn {
   background-color: hsl(0, 0%, 35%);
 }
-.top-btn:hover{
+.top-btn:hover {
   background-color: hsl(0, 0%, 45%);
 }
-.top-btn:active{
+.top-btn:active {
   background-color: hsl(0, 0%, 55%);
 }
-.blank{
+.blank {
   background-color: transparent;
 }
-.blank:hover{
+.blank:hover {
   background-color: transparent;
   cursor: unset;
 }
-
 
 /* Footer */
 .footer {
   width: 100%;
   height: 100px;
   text-align: center;
-  font-family:  'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
   animation: fadeIn 1s ease-in;
-  position: relative;
-  bottom: -5rem;
-
-
-
+  bottom: 0;
 }
 .footer p {
   margin: 0;
@@ -107,26 +104,80 @@ button:active {
   font-family: 'Source Sans Pro', sans-serif;
   color: #7c7c7c;
   text-align: center;
-  display: flex;
-  top: 1%;
-  left: 50%;
-  transform: translate(-50%, -50%);
   font-size: 3rem;
-  position: relative;
-  margin-bottom: -25px;
 }
+
 .h2 {
   background-color: transparent;
   font-family: 'Source Sans Pro', sans-serif;
   color: #7c7c7c;
   text-align: center;
-  display: flex;
-  left: 50%;
-  transform: translate(-50%, -50%);
   font-size: 1rem;
-  position: relative;
+  margin-top: -5%;
 }
 
+/* Responsive Styles */
+@media (max-width: 768px) {
+  #display {
+    font-size: 4rem;
+  }
+
+  button {
+    width: 80px;
+    height: 80px;
+    font-size: 2.5rem;
+    padding: 0;
+  }
+
+  #keys {
+    padding: 20px;
+  }
+
+  .h1 {
+    font-size: 2rem;
+
+  }
+
+  .h2 {
+    font-size: 0.875rem;
+
+  }
+}
+
+@media (max-width: 480px) {
+  #display {
+    font-size: 3rem;
+    padding: 15px;
+  }
+
+  button {
+    width: 60px;
+    height: 60px;
+    font-size: 2rem;
+    padding: 0;
+  }
+
+  #keys {
+    padding: 15px;
+  }
+
+  .h1 {
+    font-size: 1.5rem;
+
+  }
+
+  .h2 {
+    font-size: 0.75rem;
+
+  }
+
+  .footer {
+    height: auto;
+    padding: 10px;
+    font-size: 0.875rem;
+    margin: 0;
+  }
+}
 
 @keyframes fadeIn {
   from {
@@ -143,4 +194,3 @@ button:active {
 .fade-calc {
   animation: fadeIn 0.8s ease-in;
 }
-
