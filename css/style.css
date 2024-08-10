@@ -1,17 +1,20 @@
 body{
   margin: 0;
-  padding: 0;
+  padding: 20px;
   height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
   background: rgba(0, 0, 0, 0.89);
+  flex-direction: column;
 }
 
 #calculator{
   background-color: hsl(0, 0%, 0%);
   border-radius: 25px;
   max-width: 500px;
+  width: 100%;
+  min-height: 400px;
   overflow: hidden;
 }
 
@@ -85,11 +88,11 @@ button:active {
 .footer {
   width: 100%;
   height: 100px;
-  position: absolute;
-  bottom: 0;
   text-align: center;
   font-family:  'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
   animation: fadeIn 1s ease-in;
+  position: relative;
+  bottom: -5rem;
 
 
 
@@ -104,24 +107,24 @@ button:active {
   font-family: 'Source Sans Pro', sans-serif;
   color: #7c7c7c;
   text-align: center;
-  position: absolute;
   display: flex;
-  top: 10%;
+  top: 1%;
   left: 50%;
   transform: translate(-50%, -50%);
   font-size: 3rem;
+  position: relative;
+  margin-bottom: -25px;
 }
 .h2 {
   background-color: transparent;
   font-family: 'Source Sans Pro', sans-serif;
   color: #7c7c7c;
   text-align: center;
-  position: absolute;
   display: flex;
-  top: 15%;
   left: 50%;
   transform: translate(-50%, -50%);
   font-size: 1rem;
+  position: relative;
 }
 
 
