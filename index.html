@@ -6,6 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title></title>
   <link rel="stylesheet" href="css/style.css">
+  <link href='https://fonts.googleapis.com/css?family=Source Sans Pro' rel='stylesheet'>
   <meta name="description" content="">
 
   <meta property="og:title" content="">
@@ -24,16 +25,19 @@
 
 
 
-<body>
+<body >
 
-    <div>
+    <div class=fade-title>
       <a href="https://github.com/aad3m/Calculator" style="text-decoration: none">
         <h1 class="h1">Num Solver</h1>
         </a>
+      <a>
+        <h2 class="h2">Inspired by Apple's Calculator App</h2>
+      </a>
     </div>
 
 
-    <div id="calculator">
+    <div class=fade-calc id="calculator">
         <input id="display" readonly>
         <div id="keys">
           <button id="clearButton" onclick="clearOrDelete()" class="top-btn">AC</button>
@@ -55,7 +59,7 @@
           <button onclick="appendToDisplay('')" class="blank"></button>
           <button onclick="appendToDisplay('0')">0</button>
           <button onclick="appendToDisplay('.')">.</button>
-          <button onclick="calculate()">=</button>
+          <button onclick="calculate()" class="operator-btn">=</button>
 
 
         </div>
