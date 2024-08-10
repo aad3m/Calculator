@@ -76,7 +76,7 @@ function clearOrDelete() {
   if (lastActionWasCalculation) {
     clearDisplay();
   }else {
-    if (display.value.length > 1) {
+    if (display.value.length > 1 && display.value !== "Error") {
       display.value = display.value.slice(0, -1);
 
     } else {
@@ -88,8 +88,10 @@ function clearOrDelete() {
 
 // Update Button
 function updateClearButton() {
-  if (display.value.length > 0 && lastActionWasCalculation === false) {
+  if (display.value.length > 0 && display.value !== "Error") {
     clearButton.innerText = '⌫';
+  } else if (display.value === "Error") {
+    clearButton.innerText = 'AC';
   } else {
     clearButton.innerText = 'AC';
   }
